@@ -16,7 +16,7 @@ Last but not least, much much thanks to my teammates! We did not win, but I thou
 
 <br>
 
-## Development Process and Technology Stack
+## Development Process
 During the hackathon, we were given internal data (of which I cannot share unfortunately) consisting of various documents such as,
 - Design guidelines
 - Quality procedures
