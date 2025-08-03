@@ -13,6 +13,7 @@ hackathon, which are already removed.)
 Last but not least, much much thanks to my teammates! We did not win, but I thought we came up with something worth remembering.
 - [Wenxuan](https://github.com/Wenxuan-Ang)
 - [John-Henry Lim](https://github.com/Interpause)
+- mentors and organising team from Capitaland
 
 <br>
 
