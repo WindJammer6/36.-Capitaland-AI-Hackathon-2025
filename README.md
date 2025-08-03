@@ -1,5 +1,5 @@
 # 36.-Capitaland-AI-Hackathon-2025
-The Knowledge Base Retrieval Assistant (prototype) Chatbot, our submission to for the Capitaland AI Hackathon 2025, aims to automate the process of searching and comparing internal 
+The **Knowledge Base Retrieval Assistant Chatbot** (we only managed to create a prototype), our submission to for the Capitaland AI Hackathon 2025, aims to automate the process of searching and comparing internal 
 domain knowledge of a company with external online sources (market), which can take a significant amount of time manually.
 
 By solving this issue, it speeds up time efficiency, allowing employees to focus on more important parts of the project. At a business level, it allows more projects to be 
