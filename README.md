@@ -36,12 +36,12 @@ Layer 3 - Leveraging AI-generated insights to augment the continuous enhancement
 <br>
 
 ## Knowledge Base Retrieval Assistant Chatbot architecture and Technology Stack
-Our technology stack:
+**Our technology stack**
 <p align="center"> 
   <img width="1139" height="638" alt="image" src="https://github.com/user-attachments/assets/9f280dab-fd81-4a0f-9a3b-785c00622bc1" />
 </p> 
 
-Knowledge Base Retrieval Assistant Chatbot architecture:
+**Knowledge Base Retrieval Assistant Chatbot architecture**
 <p align="center"> 
   <img width="1135" height="642" alt="image" src="https://github.com/user-attachments/assets/1082dc81-2df8-409b-87bb-f19554856490" />
 </p>
