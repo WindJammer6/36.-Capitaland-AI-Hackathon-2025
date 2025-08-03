@@ -25,6 +25,7 @@ During the hackathon, we were given internal data (of which I cannot share unfor
 as well as, 
 - a query (input) and response (output) test conditions (which may/may not include the properly retrieved internal domain knowledge document, if queried by the user) database to check if the chatbot is working.
 For example:
+
 | **Query** | **Response** | **Retrieved Document** |
 |:------:|:------:|:------:|
 | May I get XXX company's LOA form | Sure, here is XXX company's LOA form | LOA_form.pdf |
