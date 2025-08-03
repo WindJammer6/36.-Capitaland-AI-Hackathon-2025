@@ -22,7 +22,14 @@ During the hackathon, we were given internal data (of which I cannot share unfor
 - Quality procedures
 - Project records
 
-as well as a query (input) and response (output) test conditions (which may/may not include the properly retrieved internal domain knowledge document, if queried by the user) database to check if the chatbot is working.
+as well as, 
+- a query (input) and response (output) test conditions (which may/may not include the properly retrieved internal domain knowledge document, if queried by the user) database to check if the chatbot is working.
+For example:
+| **Query** | **Response** | **Retrieved Document** |
+|:------:|:------:|:------:|
+| May I get XXX company's LOA form | Sure, here is XXX company's LOA form | LOA_form.pdf |
+| Is XXX company's floor plan abiding by the government's policies? | Yes it is, it is still 40m x 40m, which abides by the government's guidelines. | floor_plan.pdf |
+| Is XXX company's revenue higher than YYY company's revenue this year? | Yes, XXX company earned $300 million, which YYY company earned $200 million. | revenue.pdf |
 
 With these data and test cases, we were asked to create,  
 ```text
