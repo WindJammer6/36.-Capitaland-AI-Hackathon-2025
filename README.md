@@ -65,9 +65,15 @@ The Knowledge Base Retrieval Assistant Chatbot is made up of 3 LLMs (we used GPT
 
 We used prompt engineering to tune the System Prompt of each of the LLMs based on the outputs (repsonse).
 
+Source(s):
+- https://www.youtube.com/playlist?list=PLyqwquIuSMZqpk8GWbSFMwtHWpopBBnR_ (LinoTV) (YouTube video by LinoTV, titled "Azure AI Foundry")
+- https://www.youtube.com/watch?v=WSsA21xw-gY&t=9s (Gradio Guy) (YouTube video by Gradio Guy, titled "Gradio Tutorial for Beginners: Quick Start Guide")
+
 <br>
 
 ## Future Improvements
-We understand LLMs always have the issue of hallucination. To reduce this, we had an idea to improve by adding a sort of "controller" between the Parent Agent and the Child Agents, which is used to fact check the outputs from the Child Agents. If the outputs is found to be untrue, the outputs will not be fed into the Parent Agent, and the Parent Agent should respond with something like, "We had an error retrieving the relevant documents. Please try again."
+- We understand LLMs always have the issue of hallucination. To reduce this, we had an idea to improve by adding a sort of "controller" between the Parent Agent and the Child Agents, which is used to fact check the outputs from the Child Agents. If the outputs is found to be untrue, the outputs will not be fed into the Parent Agent, and the Parent Agent should respond with something like, "We had an error retrieving the relevant documents. Please try again."
 
-However we weren't able to implement this in time.
+  However we weren't able to implement this in time.
+
+- An alternative to using [Azure AI Foundry](https://ai.azure.com/)'s UI playground is to use [Pydantic AI](https://ai.pydantic.dev/#hello-world-example), which allows us to create AI workflows as well from scratch. We thought in the future this could be used instead.
