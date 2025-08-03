@@ -22,10 +22,9 @@ During the hackathon, we were given internal data (of which I cannot share unfor
 - Quality procedures
 - Project records
 
-as well as a query (input) and response (output) test conditions (which may/may not include the properly retrieved internal domain knowledge document, if queried by the user) 
-database to check if the chatbot is working.
+as well as a query (input) and response (output) test conditions (which may/may not include the properly retrieved internal domain knowledge document, if queried by the user) database to check if the chatbot is working.
 
-With these data and test cases, we were asked to create a,  
+With these data and test cases, we were asked to create,  
 ```text
 3-layer AI bot​ that enhances capabilities and boost productivity​:
 Layer 1 - AI chatbot of Domain Knowledge database for easy info extraction. ​
@@ -36,10 +35,32 @@ Layer 3 - Leveraging AI-generated insights to augment the continuous enhancement
 
 <br>
 
-## Knowledge Base Retrieval Assistant architecture and Technology Stack
+## Knowledge Base Retrieval Assistant Chatbot architecture and Technology Stack
 Our technology stack:
+<p align="center"> 
+  <img width="1139" height="638" alt="image" src="https://github.com/user-attachments/assets/9f280dab-fd81-4a0f-9a3b-785c00622bc1" />
+</p> 
 
-<img width="1139" height="638" alt="image" src="https://github.com/user-attachments/assets/9f280dab-fd81-4a0f-9a3b-785c00622bc1" />
+Knowledge Base Retrieval Assistant Chatbot architecture:
+<p align="center"> 
+  <img width="1135" height="642" alt="image" src="https://github.com/user-attachments/assets/1082dc81-2df8-409b-87bb-f19554856490" />
+</p>
 
+Most of the LLM configuration is done within [Azure AI Foundry](https://ai.azure.com/)'s UI playground, rather than in code. Unfortunately, we found this to be very restrictive, compared to coding from scratch, but we had no choice due to the limited time we had for the hackathon.
+
+The Knowledge Base Retrieval Assistant Chatbot is made up of 3 LLMs (we used GPT 4o),
+- a Local Files (Child) Agent that is used to retrieve documents from the internal domain knowledge using Retrieval Augmented Generation (RAG) (we used Azure AI Foundry's in-built Azure AI Search. However, the downside for this is that it only can read PDF files, and not other file types (e.g. .pptx, .xlsx, .jpeg, .png etc.). We thought that an improved version of this would be the Azure AI Foundry's in-built Multimodal RAG (but unfortunately we did not have access to this feature)
+- a Web Search (Child) Agent that is used to search external online sources (we used the Azure AI Foundry's in-built Bing Search)
+- a Coordinator (Parent) Agent that receives the query (input) and generates the output (response). It decides if to receive input from the Local Files (Child) Agent and/or the Web Search (Child) Agent based on the nature of the query (input). For example,
+  - If it is a query about retrieving a particular document only (e.g. a LOA form) from the internal domain knowledge, the Coordinator (Parent) Agent should only call for input from the Local Files (Child) Agent
+  - If it is a query about that cannot be found in the domain knowledge/specifically for an external online source (e.g. "What is the time today?"), the Coordinator (Parent) Agent should only call for input from the Web Search (Child) Agent
+  - If it is a query about comparing a internal domain knowledge with an external online source (e.g. "Is our carpark guidelines still abiding by the government's guidelines?"), the Coordinator (Parent) Agent should call for input from both the Local Files (Child) Agent and the Web Search (Child) Agent
+
+We used prompt engineering to tune the System Prompt of each of the LLMs based on the outputs (repsonse).
+
+<br>
 
 ## Future Improvements
+We understand LLMs always have the issue of hallucination. To reduce this, we had an idea to improve by adding a sort of "controller" between the Parent Agent and the Child Agents, which is used to fact check the outputs from the Child Agents. If the outputs is found to be untrue, the outputs will not be fed into the Parent Agent, and the Parent Agent should respond with something like, "We had an error retrieving the relevant documents. Please try again."
+
+However we weren't able to implement this in time.
