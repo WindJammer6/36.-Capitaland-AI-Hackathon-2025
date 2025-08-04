@@ -7,9 +7,6 @@ handled simulataneously, and allow for more latest and quality market research, 
 
 The nature of this 2-day hackathon is on GenAI.
 
-(DISCLAIMER: The code for this prototype no longer works as it requires access to the API keys from the provided [Azure AI Foundry](https://ai.azure.com/) accounts by the 
-hackathon, which are already removed.)
-
 Last but not least, much much thanks to my teammates! We did not win, but I thought we came up with something worth remembering.
 - [Wenxuan](https://github.com/Wenxuan-Ang)
 - [John-Henry Lim](https://github.com/Interpause)
@@ -70,6 +67,20 @@ We used prompt engineering to tune the System Prompt of each of the LLMs based o
 Source(s):
 - https://www.youtube.com/playlist?list=PLyqwquIuSMZqpk8GWbSFMwtHWpopBBnR_ (LinoTV) (YouTube video by LinoTV, titled "Azure AI Foundry")
 - https://www.youtube.com/watch?v=WSsA21xw-gY&t=9s (Gradio Guy) (YouTube video by Gradio Guy, titled "Gradio Tutorial for Beginners: Quick Start Guide")
+
+<br>
+
+## How to Run?
+(DISCLAIMER: The code for this prototype no longer works as it requires access to the API keys from the provided [Azure AI Foundry](https://ai.azure.com/) accounts by the 
+hackathon, which are already removed.)
+
+If not using the Devcontainer, install Poetry here: <https://python-poetry.org/docs/#installation>
+
+Afterwards, run the following to install dependencies and run the Gradio:
+```sh
+poetry install
+poetry run gradio chat.py
+```
 
 <br>
 
