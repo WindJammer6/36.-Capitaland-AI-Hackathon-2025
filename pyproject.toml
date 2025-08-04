@@ -1,0 +1,61 @@
+[tool.poetry]
+name = "py-api-template"
+version = "0.1.0"
+description = "template for python api server"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [{ include = "src" }]
+
+[tool.poetry.dependencies]
+python = "3.12.*"
+python-dotenv = "^1.1.1"
+fastapi-slim = "^0.116.1"
+uvicorn = "^0.35.0"
+uvloop = "^0.21.0"
+httptools = "^0.6.4"
+gradio = "^5.39.0"
+azure-ai-projects = "^1.0.0"
+azure-identity = "^1.23.1"
+aiohttp = "^3.12.15"
+thefuzz = "^0.22.1"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.12.3"
+poethepoet = "^0.36.0"
+rich = "^14.0.0"
+
+[tool.poetry.requires-plugins]
+poetry-plugin-export = ">=1.8"
+
+[tool.poetry.group.jupyter]
+optional = true
+
+[tool.poetry.group.jupyter.dependencies]
+ipykernel = "*"
+ipympl = "*"
+ipywidgets = "*"
+
+[tool.poe.tasks]
+dev = { cmd = "gradio chat.py", use_exec = true }
+prod = "docker run --rm --gpus all -p 3000:3000 py-api-template:latest"
+test = "echo Not Implemented Yet!"
+publish = "echo Not Implemented Yet!"
+requirements = "poetry export -o requirements.txt --without-hashes"
+
+[tool.poe.tasks.build]
+cmd = """docker build -f Dockerfile . \
+  -t py-api-template:latest \
+  -t py-api-template:${tag} \
+"""
+deps = ["requirements"]
+args = [{ name = "tag", positional = true, required = true }]
+
+[tool.ruff.lint]
+select = ["D"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
