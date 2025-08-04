@@ -44,12 +44,12 @@ Layer 3 - Leveraging AI-generated insights to augment the continuous enhancement
 ## Knowledge Base Retrieval Assistant Chatbot architecture and Technology Stack
 **Our technology stack**
 <p align="center"> 
-  <img width="1139" height="638" alt="image" src="https://github.com/user-attachments/assets/9f280dab-fd81-4a0f-9a3b-785c00622bc1" />
+  <img width="700" alt="image" src="https://github.com/user-attachments/assets/9f280dab-fd81-4a0f-9a3b-785c00622bc1" />
 </p> 
 
 **Knowledge Base Retrieval Assistant Chatbot architecture**
 <p align="center"> 
-  <img width="1135" height="642" alt="image" src="https://github.com/user-attachments/assets/1082dc81-2df8-409b-87bb-f19554856490" />
+  <img width="700" alt="image" src="https://github.com/user-attachments/assets/1082dc81-2df8-409b-87bb-f19554856490" />
 </p>
 
 Most of the LLM configuration is done within [Azure AI Foundry](https://ai.azure.com/)'s UI playground, rather than in code. Unfortunately, we found this to be very restrictive, compared to coding from scratch, but we had no choice due to the limited time we had for the hackathon.
