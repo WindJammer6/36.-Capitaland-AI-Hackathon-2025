@@ -85,7 +85,7 @@ poetry run gradio chat.py
 <br>
 
 ## Future Improvements
-- We understand LLMs always have the issue of hallucination. To reduce this, we had an idea to improve by adding a sort of "controller" between the Parent Agent and the Child Agents, which is used to fact check the outputs from the Child Agents. If the outputs is found to be untrue, the outputs will not be fed into the Parent Agent, and the Parent Agent should respond with something like, "We had an error retrieving the relevant documents. Please try again."
+- We understand LLMs always have the issue of hallucination. To reduce this, we had an idea to improve by adding a sort of "controller" layer between the Parent Agent and the Child Agents, which is used to fact check the outputs from the Child Agents. If the outputs is found to be untrue, the outputs will not be fed into the Parent Agent, and the Parent Agent should respond with something like, "We had an error retrieving the relevant documents. Please try again."
 
   However we weren't able to implement this in time.
 
