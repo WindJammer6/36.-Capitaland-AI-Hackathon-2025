@@ -30,7 +30,8 @@ as well as,
 |:------:|:------:|:------:|
 | `May I get XXX company's LOA form?` | `Sure, here is XXX company's LOA form` | `LOA_form.pdf` |
 | `Is XXX company's floor plan abiding by the government's policies?` | `Yes it is, it is still 40m x 40m, which abides by the government's guidelines.` | `floor_plan.pdf` |
-| `Is XXX company's revenue higher than YYY company's revenue this year?` | `Yes, XXX company earned $300 million, which YYY company earned $200 million.` | `revenue.pdf` |
+| `Is XXX company's revenue higher than YYY company's revenue this year?` | `Yes, XXX company earned $300 million, which YYY company earned $200 million.` | `revenue.pdf` | 
+| `What is the time now?` | `It is 1pm.` | NIL |
 
 With these data and test cases, we were asked to create,  
 ```text
