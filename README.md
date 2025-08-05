@@ -65,7 +65,7 @@ The Knowledge Base Retrieval Assistant Chatbot is made up of 3 LLMs (we used GPT
 We used prompt engineering to tune the System Prompt of each of the LLMs based on the outputs (repsonse).
 
 Source(s):
-- https://www.youtube.com/playlist?list=PLyqwquIuSMZqpk8GWbSFMwtHWpopBBnR_ (LinoTV) (YouTube video by LinoTV, titled "Azure AI Foundry")
+- https://www.youtube.com/playlist?list=PLyqwquIuSMZqpk8GWbSFMwtHWpopBBnR_ (LinoTV) (YouTube playlist by LinoTV, titled "Azure AI Foundry")
 - https://www.youtube.com/watch?v=WSsA21xw-gY&t=9s (Gradio Guy) (YouTube video by Gradio Guy, titled "Gradio Tutorial for Beginners: Quick Start Guide")
 
 <br>
